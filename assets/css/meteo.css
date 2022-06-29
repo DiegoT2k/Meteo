@@ -1,0 +1,103 @@
+body{
+  background-color: #bddbdb;
+}
+
+tr{
+ text-align: center;
+}
+
+.search{
+  background-color: lightblue;
+  border-radius: 20px;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.search:hover{
+  transition: 1000ms;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 16px;
+}
+
+.nav-link{
+  font-size: 22px;
+  font-family: 'Patrick Hand', cursive;
+  position: relative;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: whitesmoke;
+  left: 0;
+  top: 40px;
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: all 600ms ease;
+}
+
+.nav-link:hover::after{
+  transform: scaleX(1.0);
+  opacity: 1;
+}
+
+.nav-link.active{
+  cursor: pointer;
+}
+
+#meteo{
+  position: absolute;
+  left: 220px;
+  height: 90px;
+  width: 90px;
+}
+
+.carousel-item{
+  height: 17rem;    
+  color: black;
+  position: relative;
+  font-family: "Times New Roman";
+  font-size: 17px;
+}
+
+.overlay-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+  border-radius: 30px;
+  border: 2px solid black;
+  margin: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.prev{
+  margin-top: 272px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+h1.titolo{
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+}
+
+h5.sottotitolo{
+  margin-bottom: 1px;
+}

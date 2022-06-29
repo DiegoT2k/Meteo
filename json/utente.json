@@ -1,0 +1,13 @@
+{
+	"@type" : "WebPage",
+	"author" : "Tarantola Diego",
+	"editor" : "Tarantola Diego",
+	"age" : 22,
+	"name" : "Meteo",
+	"description" : "Pagina web creata per informare gli utenti sul meteo in giro per il mondo",
+	"keywords" : "Meteo, Italia, Previsioni, Temperature",
+
+	"recapiti" : {
+		"email" : ["diego.tarantola2000@gmail.com", "diego.tarantola@studenti.unimi.it"]
+	}
+}

@@ -1,0 +1,166 @@
+:root{
+  --color-bg:  #1c183a;
+  --color-light:  #3e3875;
+  --color-input:  #1155f5;
+  --color-white:  #dadada;
+  font-size: 16px;
+}
+
+*{
+  font-family: 'ABeeZee', sans-serif;
+  box-sizing: border-box;
+}
+
+.search{
+  background-color: lightblue;
+  border-radius: 20px;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.search:hover{
+  transition: 1000ms;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 16px;
+}
+
+.nav-link{
+  font-size: 22px;
+  font-family: 'Patrick Hand', cursive;
+  position: relative;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: whitesmoke;
+  left: 0;
+  top: 40px;
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: all 600ms ease;
+}
+
+.nav-link:hover::after{
+  transform: scaleX(1.0);
+  opacity: 1;
+}
+
+.nav-link.active{
+  cursor: pointer;
+}
+
+.navbar{
+  position: absolute;
+  display: inline;
+  width: 100%;
+  top: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/nuvole.jpg");
+}
+
+#form-wrapper{
+  width: 85vw;
+  border: 1px dotted var(--color-light);
+  padding: 25px 30px 36px 30px;
+  border-radius: 8%;
+  margin-top: 100px;
+  background-color: #071b69;
+}
+
+h1{
+  position: relative;
+  display: inline-block;
+  color:  var(--color-white);
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+h1::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 32px;
+  background: rgba(0, 33, 233, 1);
+  background: linear-gradient(90deg, rgba(0, 33, 233, 1) 0%, rgba(0, 116, 233, 1) 20%, rgba(0, 174, 233, 1) 100%);
+}
+
+.form-item{
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--color-light);
+  margin: 1rem auto 1.3rem;
+}
+
+div.form-item::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: relative;
+  top: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: all 500ms ease;
+  background: rgba(0, 33, 233, 1);
+  background: linear-gradient(90deg, rgba(0, 33, 233, 1) 0%, rgba(0, 116, 233, 1) 20%, rgba(0, 174, 233, 1) 100%);
+}
+
+div.form-item:focus-within::after{
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+label{
+  display: block;
+  position: absolute;
+  color: var(--color-light);
+  transform: translateY(-1.2rem);
+  transform-origin: left;
+  z-index: 1;
+  transition: transform 400ms;
+}
+
+div.form-item:focus-within label, 
+input:not(:placeholder-shown) + label{
+  transform: translateY(-2.8rem) scale(0.75);
+}
+
+input{
+  border: none;
+  outline: none;
+  background: none;
+  margin: 0;
+  width: 100%;
+  color: var(--color-input);
+  font-size: 1.1rem;
+}
+
+input[type="submit"]{
+  padding: 0.6rem 1.6rem;
+  border-radius: 1.2rem;
+  border: none;
+  width: auto;
+  font-size: .9rem;
+  margin-top: 1.8rem;
+  color: var(--color-white);
+  letter-spacing: 1px;
+  background: rgba(0, 33, 233, 1);
+  background: linear-gradient(90deg, rgba(0, 33, 233, 1) 0%, rgba(0, 116, 233, 1) 20%, rgba(0, 174, 233, 1) 100%);
+}

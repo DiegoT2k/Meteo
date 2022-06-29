@@ -1,0 +1,171 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  font-family: ;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-position: center;
+  background-size: cover;
+  font-size: 120%;
+}
+
+.navbar{
+  position: absolute;
+  display: inline;
+  width: 100%;
+  top: 0;
+}
+
+.card{
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+
+@media only screen and (max-height: 500px) {
+  .navbar{
+    visibility: hidden;
+  }
+}
+
+.searchB{
+  background-color: lightblue;
+  border-radius: 20px;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.searchB:hover{
+  transition: 1000ms;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 16px;
+}
+
+.nav-link{
+  font-size: 22px;
+  font-family: 'Patrick Hand', cursive;
+  position: relative;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: whitesmoke;
+  left: 0;
+  top: 40px;
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: all 600ms ease;
+}
+
+.nav-link:hover::after{
+  transform: scaleX(1.0);
+  opacity: 1;
+}
+
+.nav-link.active{
+  cursor: pointer;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+button{
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover{
+  background: #7c7c7c6b;
+}
+
+input.search-bar{
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+h1.temp{
+  margin: 0;
+  margin-bottom: 0.4em;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.city{
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.description{
+  text-transform: capitalize;
+  margin-left: 8px;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+a.search{
+  background-color: lightblue;
+  border-radius: 20px;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 16px;
+}
+
+.nav-link{
+  font-size: 22px;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.weather.loading{
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.weather.loading:after{
+  visibility: visible;
+  content: "In attesa di una ricerca..";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
