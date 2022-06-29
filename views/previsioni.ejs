@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta name="author" content="Tarantola Diego">
+    <meta name="description" content="Questa è una pagina dedicata per tener aggiornati gli utenti sulle temperature in giro per il mondo">
+    <meta name="keywords" content="meteo, Italia, Città, temperatura, previsioni, html, css">
+    <meta name="copyright" content="html.it">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/prev.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="js/prev.js" defer></script>
+
+    <title>DTM</title>
+  
+  </head>
+
+    <!-- Inizio Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">DTMeteo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="cercaPrevisioni">Previsioni</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="form">Form</a>
+            </li> 
+
+          </ul>
+
+            <a href="cerca" class="btn btn-outline-primary search">Meteo ora</a>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Fine Navbar-->
+
+  <body>
+
+    <div class="background">
+      <div class="transbox">
+
+        <!-- Inizio previsioni ora -->
+        <h1 id="location"><%= title %></h1>
+        <img id="meteoLocal">
+        <p id="local"></p>
+
+        <h1 id="location">Previsioni</h1>
+        <!-- Fine previsioni ora -->
+
+        <!-- Inizio Previsioni -->
+        <div class="prev">
+          <table class="table table-fluid">
+            <thead>
+              <tr>
+                <th>Giorno</th>
+                <th scope="col">Meteo</th>
+                <th scope="col">Probabilità precipitazione</th>
+                <th scope="col">Temperatura max</th>
+                <th scope="col">Temperatura min</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-title="Giorno">Domani</th>
+                <td data-title="Meteo"><img id="meteo1"></td>
+                <td id="rain1" data-title="Probabilità prec."></td>
+                <td id="temp1max" data-title="Temperatura max"></td>
+                <td id="temp1min" data-title="Temperatura min"></td>
+              </tr>
+              <tr>
+                <th scope="row" id="row2" data-title="Giorno"></th>
+                <td data-title="Meteo"><img id="meteo2"></td>
+                <td id="rain2" data-title="Probabilità prec."></td>
+                <td id="temp2max" data-title="Temperatura max"></td>
+                <td id="temp2min" data-title="Temperatura min"></td>
+              </tr>
+              <tr>
+                <th scope="row" id="row3" data-title="Giorno"></th>
+                <td data-title="Meteo"><img id="meteo3"></td>
+                <td id="rain3" data-title="Probabilità prec."></td>
+                <td id="temp3max" data-title="Temperatura max"></td>
+                <td id="temp3min" data-title="Temperatura min"></td>
+              </tr>
+              <tr>
+                <th scope="row" id="row4" data-title="Giorno"></th>
+                <td data-title="Meteo"><img id="meteo4"></td>
+                <td id="rain4" data-title="Probabilità prec."></td>    
+                <td id="temp4max" data-title="Temperatura max"></td>
+                <td id="temp4min" data-title="Temperatura min"></td>
+              </tr>
+              <tr>
+                <th scope="row" id="row5" data-title="Giorno"></th>
+                <td data-title="Meteo"><img id="meteo5"></td>
+                <td id="rain5" data-title="Probabilità prec."></td>
+                <td id="temp5max" data-title="Temperatura max"></td>
+                <td id="temp5min" data-title="Temperatura min"></td>
+              </tr>
+              <tr>
+                <th scope="row" id="row6" data-title="Giorno"></th>
+                <td data-title="Meteo"><img id="meteo6"></td>
+                <td id="rain6" data-title="Probabilità prec."></td>
+                <td id="temp6max" data-title="Temperatura max"></td>
+                <td id="temp6min" data-title="Temperatura min"></td>
+              </tr>
+              <tr>
+                <th scope="row" id="row7" data-title="Giorno"></th>
+                <td data-title="Meteo"><img id="meteo7"></td>
+                <td id="rain7" data-title="Probabilità prec."></td>
+                <td id="temp7max" data-title="Temperatura max"></td>
+                <td id="temp7min" data-title="Temperatura min"></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        
+        <a href="cercaPrevisioni" class="btn btn-outline-primary search searchBack">Torna alla ricerca</a>
+        <!-- Fine previsioni -->
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
